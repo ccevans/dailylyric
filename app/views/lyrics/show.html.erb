@@ -1,0 +1,18 @@
+<h1> <%= @lyric.title %></h1>
+<p><%= @lyric.artist %></p>
+		
+		<ul>
+		<% @lyric.lines.each do |line| %>
+			<li> <%= line.name %></li>
+
+			<% end %>
+
+		</ul>
+<p><%= @lyric.published_at %></p>
+
+
+
+    <%= link_to 'Edit', edit_lyric_path %> | 
+
+
+    <%= link_to 'Destroy', lyric_path, method: :delete, data: {confirm: "Are you sure?" } %>

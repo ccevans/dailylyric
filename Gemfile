@@ -20,6 +20,8 @@ gem 'aws-sdk'
 gem 'mail_form', '~> 1.5.1'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'coffee-script-source', '1.8.0'
+gem 'cocoon', '~> 1.2.6'
+gem 'mandrill-api', '~> 1.0', '>= 1.0.53'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
