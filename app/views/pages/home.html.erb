@@ -7,6 +7,7 @@
 	</div>
 
 <div class="centerpage">
+<% if @lyrics.any? %>
 <% @lyrics.each do |lyric| %>
 
 	 <div class="versepage"><%= simple_format(lyric.verse) %><i class="fa fa-play-circle-o"></i></div>
@@ -23,6 +24,7 @@
 
 
 
+	<% end %>
 	<% end %>
 
 	
