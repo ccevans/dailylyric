@@ -1,2 +1,33 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="backgroundpage">
+	<div class="headerpage">
+		<div class="headerleft">dailylyric.com</div>
+
+		<div class="headerright"><%= Time.now.in_time_zone("Eastern Time (US & Canada)").strftime("%A %B %d, %Y") %></div>
+
+	</div>
+
+<div class="centerpage">
+<% @lyrics.each do |lyric| %>
+
+	 <div class="versepage"><%= simple_format(lyric.verse) %><i class="fa fa-play-circle-o"></i></div>
+
+	<div class="audiopage"><%= raw(lyric.audiolink) %></div>
+
+	<ul class="">
+		<% lyric.lines.each do |line| %>
+			<li> <%= line.name %></li>
+
+			<% end %>
+
+	</ul>
+
+
+
+	<% end %>
+
+	
+
+</div>
+
+
+</div>

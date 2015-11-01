@@ -12,9 +12,13 @@
 
   <%= f.input :link, label: "Link", hint: "Link to Track" %>
 
+  <%= f.input :verse, label: "Verse" %>
+
+  <%= f.input :audiolink, label: "Audiolink" %>
+
    <%= f.simple_fields_for :lines do |line| %>
 
- 	<%= render 'line_fields', f: line %>
+ 	  <%= render 'line_fields', f: line %>
 
  	<% end %>
 

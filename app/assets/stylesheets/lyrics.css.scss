@@ -1,3 +1,38 @@
 // Place all the styles related to the lyrics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.backgroundpage {position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; padding: 0;}
+.headerpage {position: fixed; width: 100%; top: 0; left: 0; z-index:1000;}
+.headerleft	{position: absolute; top: 10px; left: 10px; font-size: 24px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
+.headerright {position: absolute; top: 10px; right: 10px; font-size: 24px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
+.headerright2 {position: absolute; top: 10px; right: 10px; font-size: 24px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
+.header1 {color: #000; position:absolute; z-index: 2000;}
+.header2 {color: #fff; position: absolute; margin-left:35px; z-index: 1500;}
+.backgroundcolor {position: relative; width: 100%; height: auto; padding: 0 0 100px 0;}
+.centerpage {position: relative; background-color:rgba(231,76,60,0); width: 100%; margin: 0; padding: 25px 0; height: auto;}
+.versepage {font-family: "futura-pt",sans-serif; width: 100%; font-size: 30px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; padding: 100px 0 0 0;}
+.versepage i {font-size: 60px; margin: 20px 0; text-align: center; width: 100%; color: #fff;}
+.centerpage ul {margin: 0; padding: 0;}
+
+.footerpage {position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .8);}
+.footerpage ul {position: relative; width: 30%; text-align: center; list-style-type: none; margin: 0 35%;}
+.footerpage ul li {float: left; width: 16%; margin: 2px 2%;}
+.footerimage {float: left; width: 100%;}
+.infopage {position: relative; width: 100%; margin: 10px 0; padding: 0; font-weight: 400; transition: all 1s ease 0s;}
+.audiopage {width: 100%; position: relative; margin: 0 0 0 0; overflow: hidden; padding: 0; height: 0; transition: all 1s ease 0s;}
+.songbutton {cursor: pointer;}
+
+.nodisplay {display: none;}
+.growdiv {height: 450px; margin: 0;}
+
+
+.gradient {
+	background-color:rgba(231,76,60,1); 
+	background-image: linear-gradient(#e74c3c, #c0392b, #8e44ad, #2980b9, #16a085);
+	background-image:-webkit-gradient(linear, from(#e74c3c), to(#16a085));
+	background-image:-webkit-linear-gradient(#e74c3c, #c0392b, #8e44ad, #2980b9, #16a085);
+	background-image:-moz-linear-gradient(#e74c3c, #c0392b, #8e44ad, #2980b9, #16a085);
+	background-image:-o-linear-gradient(#e74c3c, #c0392b, #8e44ad, #2980b9, #16a085);
+}

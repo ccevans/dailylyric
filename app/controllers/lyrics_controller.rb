@@ -2,7 +2,7 @@ class LyricsController < ApplicationController
 	before_action :find_lyric, only: [:show, :edit, :update, :destroy]
 	
 	def index
-		@lyrics = Lyric.published.order("created_at DESC").take(1)
+		@lyrics = Lyric.published.order("created_at DESC")
 	end
 
 	def show
@@ -10,6 +10,7 @@ class LyricsController < ApplicationController
 
 	def new
 		@lyric = Lyric.new
+		@lyric.lines.build
 	end
 
 	def create
@@ -41,7 +42,7 @@ class LyricsController < ApplicationController
 	private
 
 	def lyric_params
-		params.require(:lyric).permit(:title, :artist, :song, :link, :published_at, :status, lines_attributes: [:id, :name, :_destroy])
+		params.require(:lyric).permit(:title, :artist, :song, :link, :published_at, :status, :verse, :audiolink, lines_attributes: [:id, :name, :_destroy])
 	end
 
 	def find_lyric

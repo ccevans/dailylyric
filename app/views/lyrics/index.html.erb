@@ -1,8 +1,52 @@
+<div class="backgroundpage">
+	<div class="headerpage">
+		<div class="headerleft"><span class="header1">daily</span><span class="header2">lyric.com</span></div>
+
+	</div>
+
+	<div class="footerpage">
+		<ul>
+			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
+			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
+			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
+			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
+			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
+		</ul>
+
+
+	</div>
+
+<div class="backgroundcolor gradient">
+
+
 <% @lyrics.each do |lyric| %>
+	
+	<div class="centerpage <%= lyric.id %>">
+		<div class="headerright2"><%= lyric.published_at.strftime("%A %B %d, %Y") %></div>
 
-<H2><%= link_to lyric.title, lyric %>
+	 <div class="versepage <%= lyric.id %>"><%= simple_format(lyric.verse) %>
 
-	<ul>
+	 	<div class="infopage <%= lyric.id %> nodisplay">
+	 		<%= lyric.artist %></br>
+	 		<%= lyric.song %>
+
+
+	 	</div>
+	 	<div id="<%= lyric.id %>">
+
+	 	<div class="audiopage <%= lyric.id %>"><%= raw(lyric.audiolink) %></div>
+
+		</div>
+
+	 	<div class="songbutton <%= lyric.id %>">
+	 	<i class="fa fa-play-circle-o"></i>
+	 	</div>
+
+	 </div>
+
+	
+
+	<ul class="">
 		<% lyric.lines.each do |line| %>
 			<li> <%= line.name %></li>
 
@@ -10,6 +54,34 @@
 
 	</ul>
 
+	</div>
+
+	<script>
+	$('.songbutton' + '.<%= lyric.id %>').click(function(){
+		$('.audiopage' + '.<%= lyric.id %>').addClass('growdiv');
+		$('.infopage' + '.<%= lyric.id %>').removeClass('nodisplay');
+		$(this).addClass('nodisplay');
+	});
+
+	//function growDiv() {
+	  //  var growDiv = document.getElementById('<%= lyric.id %>');
+	    //if (growDiv.clientHeight) {
+	//      growDiv.style.height = 0;
+	//    } else {
+	//      var wrapper = document.getElementsByClassName('audiopage <%= lyric.id %>');
+	//      growDiv.style.height = wrapper.clientHeight + "px";
+	 //   }
+	//}
+
+	</script>
+
+
+
 	<% end %>
 
-	<h1><%= Time.now.in_time_zone("Eastern Time (US & Canada)").strftime("%A %B %d, %Y") %></h1>
+</div>
+
+
+</div>
+
+
