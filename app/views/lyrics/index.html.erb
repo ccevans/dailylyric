@@ -4,6 +4,21 @@
 
 	</div>
 
+	<div class="overlay nodisplay"></div>
+
+	<div class="rightmenu">
+		<ul>
+			<li>Past Lyrics</li>
+			<li>Submit Track</li>
+			<li>Partner With Us</li>
+			<li>Wake Up Email</li>
+			<li>DL Twitter</li>
+			<li>DL Instagram</li>
+			<li><%= @xtime %></li>
+
+		</ul>
+	</div>
+
 	<div class="footerpage">
 		<ul>
 			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
@@ -16,73 +31,44 @@
 
 	</div>
 
-<div class="backgroundcolor gradient">
-
-<% if @lyrics.any? %>
-<% @lyrics.each do |lyric| %>
-	
-	<div class="centerpage <%= lyric.id %>">
-		<div class="headerright2"><%= lyric.published_at.strftime("%A %B %d, %Y") %></div>
-
-	 <div class="versepage <%= lyric.id %>"><%= simple_format(lyric.verse) %>
-
-	 	<div class="infopage <%= lyric.id %> nodisplay">
-	 		<%= lyric.artist %></br>
-	 		<%= lyric.song %>
-
-
-	 	</div>
-	 	<div id="<%= lyric.id %>">
-
-	 	<div class="audiopage <%= lyric.id %>"><%= raw(lyric.audiolink) %></div>
-
-		</div>
-
-	 	<div class="songbutton <%= lyric.id %>">
-	 	<i class="fa fa-play-circle-o"></i>
-	 	</div>
-
-	 </div>
-
-	
-
-	<ul class="">
-		<% lyric.lines.each do |line| %>
-			<li> <%= line.name %></li>
-
-			<% end %>
-
-	</ul>
-
+	<div id="plusbutton">
+		<span class="fa-stack fa-lg">
+		  <i class="fa fa-circle-thin fa-stack-2x"></i>
+		  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+		</span>
 	</div>
 
-	<script>
-	$('.songbutton' + '.<%= lyric.id %>').click(function(){
-		$('.audiopage' + '.<%= lyric.id %>').addClass('growdiv');
-		$('.infopage' + '.<%= lyric.id %>').removeClass('nodisplay');
-		$(this).addClass('nodisplay');
+<div class="backgroundcolor gradient">
+
+<div id="my-lyrics">
+  <%= render @lyrics %>
+</div>
+
+<div id="infinite-scrolling">
+  <%= will_paginate @lyrics %>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+<script>
+	$('#plusbutton').click(function(){
+		$('.rightmenu').addClass('revealed');
+		$('.overlay').removeClass('nodisplay');
+		$('body').addClass("noscroll");
+	});
+	$('.overlay').click(function(){
+		$('.rightmenu').removeClass('revealed');
+		$('.overlay').addClass('nodisplay');
+		$('body').removeClass("noscroll");
 	});
 
-	//function growDiv() {
-	  //  var growDiv = document.getElementById('<%= lyric.id %>');
-	    //if (growDiv.clientHeight) {
-	//      growDiv.style.height = 0;
-	//    } else {
-	//      var wrapper = document.getElementsByClassName('audiopage <%= lyric.id %>');
-	//      growDiv.style.height = wrapper.clientHeight + "px";
-	 //   }
-	//}
-
-	</script>
 
 
-
-	<% end %>
-	<% end %>
-
-</div>
-
-
-</div>
+</script>
 
 

@@ -1,8 +1,17 @@
 class LyricsController < ApplicationController
 	before_action :find_lyric, only: [:show, :edit, :update, :destroy]
-	
+	respond_to :html, :js
+
 	def index
-		@lyrics = Lyric.published.order("created_at DESC")
+		@lyrics = Lyric.paginate(page: params[:page], per_page: 5).published.order('created_at DESC')
+		
+		respond_to do |format|
+		  format.html
+		  format.js
+		end
+
+		@xtime = @lyrics.count
+
 	end
 
 	def show

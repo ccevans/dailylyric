@@ -10,19 +10,25 @@
 .headerright2 {position: absolute; top: 10px; right: 10px; font-size: 24px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
 .header1 {color: #000; position:absolute; z-index: 2000;}
 .header2 {color: #fff; position: absolute; margin-left:35px; z-index: 1500;}
-.backgroundcolor {position: relative; width: 100%; height: auto; padding: 0 0 100px 0;}
+.backgroundcolor {position: relative; width: 100%; height: auto; padding: 0 0 100px 0; background-color:rgba(231,76,60,1);}
 .centerpage {position: relative; background-color:rgba(231,76,60,0); width: 100%; margin: 0; padding: 25px 0; height: auto;}
 .versepage {font-family: "futura-pt",sans-serif; width: 100%; font-size: 30px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; padding: 100px 0 0 0;}
 .versepage i {font-size: 60px; margin: 20px 0; text-align: center; width: 100%; color: #fff;}
 .centerpage ul {margin: 0; padding: 0;}
 
-.footerpage {position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .8);}
+.footerpage {display: none; position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .8);}
 .footerpage ul {position: relative; width: 30%; text-align: center; list-style-type: none; margin: 0 35%;}
 .footerpage ul li {float: left; width: 16%; margin: 2px 2%;}
 .footerimage {float: left; width: 100%;}
 .infopage {position: relative; width: 100%; margin: 10px 0; padding: 0; font-weight: 400; transition: all 1s ease 0s;}
-.audiopage {width: 100%; position: relative; margin: 0 0 0 0; overflow: hidden; padding: 0; height: 0; transition: all 1s ease 0s;}
+.audiopage {background-color:rgba(0,0,0,1); width: 100%; position: relative; margin: 0 0 0 0; overflow: hidden; padding: 0; height: 0; transition: all 1s ease 0s;}
 .songbutton {cursor: pointer;}
+.pageimage {position: relative; width: 30%; margin: 0 35%; }
+
+body.noscroll {
+    overflow: hidden;
+    position: relative;
+}
 
 .nodisplay {display: none;}
 .growdiv {height: 450px; margin: 0;}
@@ -36,3 +42,15 @@
 	background-image:-moz-linear-gradient(#e74c3c, #c0392b, #8e44ad, #2980b9, #16a085);
 	background-image:-o-linear-gradient(#e74c3c, #c0392b, #8e44ad, #2980b9, #16a085);
 }
+
+.rightmenu {width: 25%; margin: 0; padding: 0; font-size: 30px; font-family: "futura-pt",sans-serif; font-weight: 400; color: #fff; background-color: rgba(0, 0, 0, .80); overflow-y: scroll; height: 100%; list-style: none; position: fixed; top: 0; right: 0; z-index: 5000; transition: all 300ms ease 0s; max-width: 350px; transform: translateX(100%);}
+.rightmenu.revealed {transform: translateX(0%);}
+.rightmenu ul {list-style-type: none; width: 100%; margin: 25px 0;}
+.rightmneu ul li {width: 100%; height: auto; padding: 20px 0;}
+
+#plusbutton {position: fixed; opacity: .8; top: 40%; right: 30px; cursor: pointer; font-size: 20px; color: #fff; z-index: 1000;}
+#plusbutton:hover {opacity: 1;}
+.overlay {cursor: pointer; position: fixed; background-color: rgba(0,0,0,.6); bottom: 0; left: 0; top: 0; right: 0; transition: opacity .25s linear 0s; z-index: 4000; opacity: 1;}
+.overlay.revealed {cursor: pointer; position: fixed; background-color: rgba(0,0,0,.6); bottom: 0; left: 0; top: 0; right: 0; transition: opacity .25s linear 0s; z-index: 4000; opacity: 1;}
+
+.pagination ul {display: none;}

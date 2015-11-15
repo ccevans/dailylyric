@@ -1,0 +1,53 @@
+	<div class="centerpage <%= lyric.id %>">
+		<div class="headerright2"><%= lyric.published_at.strftime("%A %B %d, %Y") %></div>
+
+	 <div class="versepage <%= lyric.id %>"><%= simple_format(lyric.verse) %>
+
+	 	<div class="infopage <%= lyric.id %> nodisplay">
+	 		<%= lyric.artist %></br>
+	 		<%= lyric.song %>
+
+
+	 	</div>
+	 	<div id="<%= lyric.id %>">
+
+	 	<div class="audiopage <%= lyric.id %>"><%= raw(lyric.audiolink) %></div>
+
+		</div>
+
+	 	<div class="songbutton <%= lyric.id %>">
+	 	<i class="fa fa-play-circle-o"></i>
+	 	</div>
+
+	 </div>
+
+	
+
+	<ul class="">
+		<% lyric.lines.each do |line| %>
+			<li> <%= line.name %></li>
+
+			<% end %>
+
+	</ul>
+
+	</div>
+
+		<script>
+	$('.songbutton' + '.<%= lyric.id %>').click(function(){
+		$('.audiopage' + '.<%= lyric.id %>').addClass('growdiv');
+		$('.infopage' + '.<%= lyric.id %>').removeClass('nodisplay');
+		$(this).addClass('nodisplay');
+	});
+
+	//function growDiv() {
+	  //  var growDiv = document.getElementById('<%= lyric.id %>');
+	    //if (growDiv.clientHeight) {
+	//      growDiv.style.height = 0;
+	//    } else {
+	//      var wrapper = document.getElementsByClassName('audiopage <%= lyric.id %>');
+	//      growDiv.style.height = wrapper.clientHeight + "px";
+	 //   }
+	//}
+
+	</script>

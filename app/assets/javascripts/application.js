@@ -15,3 +15,23 @@
 //= require cocoon
 //= require turbolinks
 //= require_tree .
+//= require bindWithDelay
+
+
+$(document).ready(function() {
+  if ($('.pagination').length) {
+    $(window).bindWithDelay("scroll", function() {
+      var url = $('.pagination .next_page a').attr('href');
+      	if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 100) {
+	      	if ($('.pagination .next_page.disabled a').length > 0) {
+	      		console.log("disabled");
+	      		return false;
+	      	} else {
+			    $('.pagination').html('<img src="/assets/ajax-loader.gif" alt="Loading..." title="Loading..." />');
+			    return $.getScript(url);
+			}
+	    }
+    }, 100);
+    return $(window).scroll();
+  }
+});
