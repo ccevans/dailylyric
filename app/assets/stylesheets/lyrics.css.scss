@@ -16,12 +16,12 @@
 .versepage i {font-size: 60px; margin: 20px 0; text-align: center; width: 100%; color: #fff;}
 .centerpage ul {margin: 0; padding: 0;}
 
-.footerpage {display: none; position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .8);}
+.footerpage {position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .8);}
 .footerpage ul {position: relative; width: 30%; text-align: center; list-style-type: none; margin: 0 35%;}
 .footerpage ul li {float: left; width: 16%; margin: 2px 2%;}
 .footerimage {float: left; width: 100%;}
 .infopage {position: relative; width: 100%; margin: 10px 0; padding: 0; font-weight: 400; transition: all 1s ease 0s;}
-.audiopage {background-color:rgba(0,0,0,1); width: 100%; position: relative; margin: 0 0 0 0; overflow: hidden; padding: 0; height: 0; transition: all 1s ease 0s;}
+.audiopage {background-color:rgba(0,0,0,.5); width: 100%; position: relative; margin: 0 0 0 0; overflow: hidden; padding: 0; height: 0; transition: all 1s ease 0s;}
 .songbutton {cursor: pointer;}
 .pageimage {position: relative; width: 30%; margin: 0 35%; }
 
@@ -46,11 +46,103 @@ body.noscroll {
 .rightmenu {width: 25%; margin: 0; padding: 0; font-size: 30px; font-family: "futura-pt",sans-serif; font-weight: 400; color: #fff; background-color: rgba(0, 0, 0, .80); overflow-y: scroll; height: 100%; list-style: none; position: fixed; top: 0; right: 0; z-index: 5000; transition: all 300ms ease 0s; max-width: 350px; transform: translateX(100%);}
 .rightmenu.revealed {transform: translateX(0%);}
 .rightmenu ul {list-style-type: none; width: 100%; margin: 25px 0;}
-.rightmneu ul li {width: 100%; height: auto; padding: 20px 0;}
+.rightmenu ul li {width: 100%; height: auto; padding: 0;}
+.rightmenu ul li:hover {color: #e74c3c;}
 
 #plusbutton {position: fixed; opacity: .8; top: 40%; right: 30px; cursor: pointer; font-size: 20px; color: #fff; z-index: 1000;}
 #plusbutton:hover {opacity: 1;}
 .overlay {cursor: pointer; position: fixed; background-color: rgba(0,0,0,.6); bottom: 0; left: 0; top: 0; right: 0; transition: opacity .25s linear 0s; z-index: 4000; opacity: 1;}
 .overlay.revealed {cursor: pointer; position: fixed; background-color: rgba(0,0,0,.6); bottom: 0; left: 0; top: 0; right: 0; transition: opacity .25s linear 0s; z-index: 4000; opacity: 1;}
 
+#infinite-scrolling {position: relative; width: 100px; margin: 0 auto;}
 .pagination ul {display: none;}
+
+// form css
+
+form.simple_forml.contact {width: 50%; margin: 0 25%; font-family: 'Century Gothic', Sans-Serif;}
+form.simple_form.contact div.input {border: none; margin: 10px 0; background-color: none; width: 100%;}
+form.simple_form.contact div.input label {display: none; min-width: 20%; color: #fff; font-family: 'Century Gothic', Sans-Serif; font-weight: 700; font-size: 36px; line-height: 36px;}
+form.simple_form.contact div.input input {margin: 15px 0; font-family: 'Century Gothic', Sans-Serif; width: 100%; background-color: rgba(0,113,152,0); border: none; border-bottom: 2px solid #fff; font-size: 36px; line-height: 36px; color: #fff;}
+form.simple_form.contact div.input label.required abbr {display: none;}
+form.simple_form.contact div.form-group {text-align: center; font-size: 36px; color: #fff; font-family: 'Century Gothic', Sans-Serif;}
+form.simple_form.contact div.form-group select {border: none; background-color: rgba(0,0,0,0); border-bottom: 2px solid #fff;}
+form.simple_form.contact div input.btn.btn.btn-primary {font-size: 36px; border-radius: 0; padding: 10px 20px; background-color: rgba(255, 255, 255, 0); color: #fff; border: 2px solid #fff;}
+form.simple_form.contact div.form-group select option {background-color: rbga(0,0,0,0); color: #fff; border: none;}
+
+// footer nav
+.navfooter {position: relative; float: left; height: auto; width: 100%; margin: 0; padding: 15px 5%; background-color:rgba(232,234,233,1); color: #000;}
+.checklist {position: relative; width: 300px; height: 5px; background-color: rgba(0,0,0,1); opacity: 1; overflow: visible; margin: 5px auto;}
+.checklist .circletop {background-color: rgba(0,0,0, 1); width: 30px; height: 30px; border-radius: 50%; border: 5px solid rgba(232, 234, 233, 1);}
+.contacttoday {position: relative; float: left; color: #000; font-size: 18px; font-weight: 700; margin: 5px 25px;}
+#circlelist1 {position: absolute; top: -17.5px; left: -5px;}
+#circlelist2 {position: absolute; top: -17.5px; left: 137.5px;}
+#circlelist3 {position: absolute; top: -17.5px; right: -5px;}
+.sitedesign {position: relative; float: right; color: #000; font-size: 18px; font-weight: 400; margin: 5px 25px;}
+.sitedesign a {color: #000;}
+.sitedesign a:hover {color: #000; font-weight: 700;}
+
+// hidden form
+#wrapperform {opacity: 0; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,1.0); margin: 0;}
+#wrapperform.active {opacity: 1; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,1.0); margin: 0;}
+#hiddenform {position: absolute; opacity: 0; background-color: none; z-index: 0; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 0 auto;}
+#hiddenform.active {position: absolute; opacity: 1; background-color: none; z-index: 1000; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 0 auto;}
+
+#wrapperform2 {opacity: 0; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(215,121,172,.95); margin: 0;}
+#wrapperform2.active {opacity: 1; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(215,121,172,.95); margin: 0;}
+#hiddenform2 {position: absolute; opacity: 0; background-color: none; z-index: 0; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 0 auto;}
+#hiddenform2.active {position: absolute; opacity: 1; background-color: none; z-index: 1000; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 0 auto;}
+
+#hiddenform2 h1 {text-align: center; font-size: 48px; color: #000;}
+#hiddenform2 h2 {text-align: center; font-size: 36px; color: #000;}
+
+#hiddenform2 div {width: 100%; position: relative; text-align: center;}
+#hiddenform2 div i {font-size: 36px; margin: 10px; color: #000;}
+#hiddenform2 div i:hover {font-size: 36px; margin: 10px; color: #fff;}
+
+// closed button 
+#sitemenu-icon {display: none;}
+#sitemenu-icon.active {
+	background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    width: 32px;
+    z-index: 10000;
+}
+
+#sitemenu-icon span {
+    background: #eaeaea none repeat scroll 0 0;
+    height: 4px;
+    position: absolute;
+    transition: all 300ms cubic-bezier(0.63, 0.64, 0.3, 1) 0s;
+    width: 32px;
+}
+#sitemenu-icon span.line1 {
+    top: 0;
+}
+#sitemenu-icon span.line2 {
+    top: 10px;
+}
+#sitemenu-icon span.line3 {
+    top: 20px;
+}
+#sitemenu-icon.open .line1 {
+    top: 12px;
+    transform: rotate(-45deg);
+}
+#sitemenu-icon.open .line2 {
+    opacity: 0;
+}
+#sitemenu-icon.open .line3 {
+    top: 12px;
+    transform: rotate(45deg);
+}
+
+#partnernow {cursor: pointer;}
+#dailyemail {cursor: pointer;}
+.infopage a {color: #fff; text-decoration: none; font-size: 18px;}
+.infopage a:hover {color: #000; text-decoration: none; font-size: 18px;}
+.infopage span {font-size: 18px; line-height: 20px;}

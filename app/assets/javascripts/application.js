@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require cocoon
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 //= require bindWithDelay
@@ -22,7 +23,7 @@ $(document).ready(function() {
   if ($('.pagination').length) {
     $(window).bindWithDelay("scroll", function() {
       var url = $('.pagination .next_page a').attr('href');
-      	if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 100) {
+      	if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
 	      	if ($('.pagination .next_page.disabled a').length > 0) {
 	      		console.log("disabled");
 	      		return false;

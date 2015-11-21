@@ -6,16 +6,32 @@
 
 	<div class="overlay nodisplay"></div>
 
+	<div id="sitemenu-icon">
+	<span class="line1"></span>
+	<span class="line3"></span>
+</div>
+
+	<div id="wrapperform">
+	<div id="hiddenform" class="">
+
+		<%= render 'contacts/new' %>
+			
+	</div>
+</div>
+<div id="wrapperform2">
+	<div id="hiddenform2" class="">
+		<script src="https://gumroad.com/js/gumroad-embed.js"></script>
+		<div class="gumroad-product-embed" data-gumroad-product-id="yQNjO"><a href="https://gumroad.com/l/yQNjO">Loading...</a></div>
+
+		</div>
+	</div>
+
 	<div class="rightmenu">
 		<ul>
-			<li>Past Lyrics</li>
-			<li>Submit Track</li>
-			<li>Partner With Us</li>
-			<li>Wake Up Email</li>
-			<li>DL Twitter</li>
-			<li>DL Instagram</li>
-			<li><%= @xtime %></li>
-
+			<li id="partnernow">Partner With Us</li>
+			<li id="dailyemail">Daily Email</li>
+			<li>Twitter</li>
+			<li>Instagram</li>
 		</ul>
 	</div>
 
@@ -41,8 +57,14 @@
 <div class="backgroundcolor gradient">
 
 <div id="my-lyrics">
-  <%= render @lyrics %>
-</div>
+<% if @lyrics.any? %>
+
+  		<%= render @lyrics %>
+
+<% end %>
+	</div>
+
+
 
 <div id="infinite-scrolling">
   <%= will_paginate @lyrics %>
@@ -60,13 +82,55 @@
 		$('.rightmenu').addClass('revealed');
 		$('.overlay').removeClass('nodisplay');
 		$('body').addClass("noscroll");
+		$("#hiddenform").removeClass("active");
+		$("#wrapperform").removeClass("active");
+		$("#hiddenform2").removeClass("active");
+		$("#wrapperform2").removeClass("active");
+		$("#sitemenu-icon").removeClass("open");
+		$("#sitemenu-icon").removeClass("active");
 	});
 	$('.overlay').click(function(){
 		$('.rightmenu').removeClass('revealed');
 		$('.overlay').addClass('nodisplay');
 		$('body').removeClass("noscroll");
+		$("#hiddenform").removeClass("active");
+		$("#wrapperform").removeClass("active");
+		$("#hiddenform2").removeClass("active");
+		$("#wrapperform2").removeClass("active");
+		$("#sitemenu-icon").removeClass("open");
+		$("#sitemenu-icon").removeClass("active");
 	});
-
+	$("#dailyemail").click(function(){
+		$("#hiddenform").addClass("active");
+		$("#wrapperform").addClass("active");
+		$("#sitemenu-icon").addClass("active");
+		$("#sitemenu-icon").addClass("open");
+		$('body').addClass("noscroll");
+		$('.rightmenu').removeClass('revealed');
+		$('.overlay').addClass('nodisplay');
+	});
+	$("#partnernow").click(function(){
+		$("#hiddenform2").addClass("active");
+		$("#wrapperform2").addClass("active");
+		$("#sitemenu-icon").addClass("active");
+		$("#sitemenu-icon").addClass("open");
+		$('body').addClass("noscroll");
+		$('.rightmenu').removeClass('revealed');
+		$('.overlay').addClass('nodisplay');
+	});
+	$("#sitemenu-icon").click(function(){
+		$("#hiddenform").removeClass("active");
+		$("#wrapperform").removeClass("active");
+		$("#hiddenform2").removeClass("active");
+		$("#wrapperform2").removeClass("active");
+		$("#sitemenu-icon").removeClass("open");
+		$("#sitemenu-icon").removeClass("active");
+		$('body').removeClass("noscroll");
+	});
+	$('.backgroundcolor').click(function(){
+		
+		console.log(55);
+	});
 
 
 </script>

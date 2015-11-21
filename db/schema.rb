@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151031162142) do
+ActiveRecord::Schema.define(version: 20151121010441) do
 
   create_table "lines", force: true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20151031162142) do
     t.datetime "published_at"
     t.text     "verse"
     t.string   "audiolink"
+    t.string   "curator"
   end
 
 end

@@ -1,22 +1,28 @@
-	<div class="centerpage <%= lyric.id %>">
+
+
+	<div id="<%= lyric.id %>" class="centerpage <%= lyric.id %>">
 		<div class="headerright2"><%= lyric.published_at.strftime("%A %B %d, %Y") %></div>
 
 	 <div class="versepage <%= lyric.id %>"><%= simple_format(lyric.verse) %>
 
 	 	<div class="infopage <%= lyric.id %> nodisplay">
 	 		<%= lyric.artist %></br>
-	 		<%= lyric.song %>
+	 		<%= lyric.song %></br>
+	 		
+	 		<span data-toggle="tooltip" data-placement="top" title="Curator"><%= link_to lyric.curator, lyric.link %></span>
 
 
 	 	</div>
-	 	<div id="<%= lyric.id %>">
+	 	<div>
 
 	 	<div class="audiopage <%= lyric.id %>"><%= raw(lyric.audiolink) %></div>
 
 		</div>
 
 	 	<div class="songbutton <%= lyric.id %>">
+	 	<%= link_to :anchor => lyric.id, :class => "anchor" do %>
 	 	<i class="fa fa-play-circle-o"></i>
+	 	<% end %>
 	 	</div>
 
 	 </div>
@@ -33,21 +39,20 @@
 
 	</div>
 
-		<script>
-	$('.songbutton' + '.<%= lyric.id %>').click(function(){
-		$('.audiopage' + '.<%= lyric.id %>').addClass('growdiv');
-		$('.infopage' + '.<%= lyric.id %>').removeClass('nodisplay');
-		$(this).addClass('nodisplay');
-	});
+  			<script>
+				$('.songbutton' + '.<%= lyric.id %>').click(function(){
+			
+					$('.audiopage' + '.<%= lyric.id %>').addClass('growdiv');
+					$('.infopage' + '.<%= lyric.id %>').removeClass('nodisplay');
+					$(this).addClass('nodisplay');
+				});
 
-	//function growDiv() {
-	  //  var growDiv = document.getElementById('<%= lyric.id %>');
-	    //if (growDiv.clientHeight) {
-	//      growDiv.style.height = 0;
-	//    } else {
-	//      var wrapper = document.getElementsByClassName('audiopage <%= lyric.id %>');
-	//      growDiv.style.height = wrapper.clientHeight + "px";
-	 //   }
-	//}
+				$(function () {
+					  $('[data-toggle="tooltip"]').tooltip()
+				})
 
-	</script>
+				</script>
+
+  		
+
+	
