@@ -51,7 +51,7 @@ class LyricsController < ApplicationController
 	private
 
 	def lyric_params
-		params.require(:lyric).permit(:title, :artist, :song, :link, :published_at, :status, :verse, :audiolink, :curator, lines_attributes: [:id, :name, :_destroy])
+		params.require(:lyric).permit(:title, :artist, :song, :link, :curator, :published_at, :status, :verse, :audiolink, lines_attributes: [:id, :name, :_destroy])
 	end
 
 	def find_lyric
