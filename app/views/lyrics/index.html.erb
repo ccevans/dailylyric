@@ -37,8 +37,13 @@
 
 	<div class="footerpage">
 		<ul>
-			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
-			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
+			<%= link_to 'https://www.rhymesanddesigns.com' do %>
+			<li><span data-toggle="tooltip" data-placement="top" title="Currently listening to Jay Rock 90059 album.  We think it is one of the best albums of the year.  TDE blessed us with two dope tracks this year.  Check out our clothing brand inspired by music."><%= image_tag 'logo-rhymes-designs.png', :id => "adlogo1", :class => "footerimage" %></span></li>
+			<% end %>
+
+			<%= link_to "https://www.ccevans.com" do %>
+			<li><span data-toggle="tooltip" data-placement="top" title="One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up."><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></span></li>
+			<% end %>
 			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
 			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
 			<li><%= image_tag 'logo-rhymes-designs.png', :class => "footerimage" %></li>
@@ -131,6 +136,10 @@
 		
 		console.log(55);
 	});
+
+	$(function () {
+	  $('[data-toggle="popover"]').popover()
+	})
 
 
 </script>

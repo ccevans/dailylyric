@@ -1,20 +1,56 @@
-<h1> <%= @lyric.title %></h1>
-<p><%= @lyric.artist %></p>
+<div class="backgroundcolor">
+<div id="<%= @lyric.id %>" class="centerpage <%= @lyric.id %>">
+		<div class="headerright2"><%= @lyric.published_at.strftime("%A %B %d, %Y") %></div>
+
+	 <div class="versepage <%= @lyric.id %>"><%= simple_format(@lyric.verse) %>
+
+	 	<div class="infopage <%= @lyric.id %> nodisplay">
+	 		<%= @lyric.artist %></br>
+	 		<%= @lyric.song %></br>
+	 		
+	 		<span data-toggle="tooltip" data-placement="top" title="Curator"><%= link_to @lyric.curator, @lyric.link %></span>
 
 
-		
-		<ul>
-		<% @lyric.lines.each do |line| %>
-			<li> <%= line.name %></li>
+	 	</div>
+	 	<div>
 
-			<% end %>
+	 	<div class="audiopage <%= @lyric.id %>"><%= raw(@lyric.audiolink) %></div>
 
-		</ul>
-<p><%= @lyric.published_at %></p>
+		</div>
+
+	 	<div class="songbutton <%= @lyric.id %>">
+	 	<%= link_to :anchor => @lyric.id, :class => "anchor" do %>
+	 	<i class="fa fa-play-circle-o"></i>
+	 	<% end %>
+	 	</div>
+
+	 </div>
+
+	
+
+	</div>
+</div>
+
+  			<script>
+				$('.songbutton' + '.<%= @lyric.id %>').click(function(){
+			
+					$('.audiopage' + '.<%= @lyric.id %>').addClass('growdiv');
+					$('.infopage' + '.<%= @lyric.id %>').removeClass('nodisplay');
+					$(this).addClass('nodisplay');
+				});
+
+				$(function () {
+					  $('[data-toggle="tooltip"]').tooltip()
+				})
+
+				</script>
+
+  		
+
+	
 
 
 
-    <%= link_to 'Edit', edit_lyric_path %> | 
 
 
     <%= link_to 'Destroy', lyric_path, method: :delete, data: {confirm: "Are you sure?" } %>

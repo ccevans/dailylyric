@@ -25,7 +25,7 @@ class LyricsController < ApplicationController
 	def create
 		@lyric = Lyric.new(lyric_params)
 		if @lyric.save
-			redirect_to @lyric, notice: "Successfully created new lyric"
+			redirect_to action: "index"
 		else
 			render 'new'
 		end
