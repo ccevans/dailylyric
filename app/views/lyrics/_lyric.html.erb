@@ -1,7 +1,7 @@
 
 
 	<div id="<%= lyric.id %>" class="centerpage <%= lyric.id %>">
-		<div class="headerright2"><%= lyric.published_at.strftime("%A %B %d, %Y") %></div>
+		<div class="headerright2"><%= lyric.published_at.strftime("%a. %b %d, %Y") %></div>
 
 	 <div class="versepage <%= lyric.id %>"><%= simple_format(lyric.verse) %>
 
@@ -33,7 +33,6 @@
 
   			<script>
 				$('.songbutton' + '.<%= lyric.id %>').click(function(){
-			
 					$('.audiopage' + '.<%= lyric.id %>').addClass('growdiv');
 					$('.infopage' + '.<%= lyric.id %>').removeClass('nodisplay');
 					$(this).addClass('nodisplay');
