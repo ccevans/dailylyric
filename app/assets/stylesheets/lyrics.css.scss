@@ -165,7 +165,7 @@ form.simple_form.contact div.form-group select option {background-color: rbga(0,
     .versepage p {padding: 0 10%; width: 100%;}
 
     .footerpage {position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .8);}
-    .footerpage ul {position: relative; width: 90%; text-align: center; list-style-type: none; margin: 0 5%; padding: 0;}
+    .footerpage ul {position: relative; width: 80%; text-align: center; list-style-type: none; margin: 0 10%; padding: 0;}
     .footerpage ul li {float: left; width: 16%; margin: 2px 2%;}
     .footerimage {float: left; width: 100%;}
     .infopage {position: relative; width: 100%; margin: 10px 0; padding: 0; font-weight: 400; transition: all 1s ease 0s;}
@@ -193,7 +193,7 @@ form.simple_form.contact div.form-group select option {background-color: rbga(0,
 
     .rightmenu {width: 50%; margin: 0; padding: 0; font-size: 18px; font-family: "futura-pt",sans-serif; font-weight: 400; color: #fff; background-color: rgba(0, 0, 0, .80); overflow-y: scroll; height: 100%; list-style: none; position: fixed; top: 0; right: 0; z-index: 5000; transition: all 300ms ease 0s; max-width: 350px; transform: translateX(100%);}
     .rightmenu.revealed {transform: translateX(0%);}
-    .rightmenu ul {list-style-type: none; width: 100%; margin: 15px 0;}
+    .rightmenu ul {list-style-type: none; width: 100%; margin: 15px 0; padding: 0 10px 0 0;}
     .rightmenu ul li {width: 100%; height: auto; padding: 0;}
     .rightmenu ul li:hover {color: #e74c3c;}
 
