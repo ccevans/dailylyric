@@ -36,22 +36,22 @@
 		</ul>
 	</div>
 
+
 	<div class="footerpage">
 		<ul>
-			<%= link_to 'https://www.rhymesanddesigns.com' do %>
-			<li><span data-toggle="tooltip" data-placement="top" title="Currently listening to Jay Rock 90059 album.  We think it is one of the best albums of the year.  TDE blessed us with two dope tracks this year.  Check out our clothing brand inspired by music."><%= image_tag 'rndhat.png', :id => "adlogo1", :class => "footerimage" %></span></li>
-			<% end %>
-
+			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" title="Rhymes & Designs" data-content="Currently listening to Jay Rock 90059 album.  We think it is one of the best albums of the year.  TDE blessed us with two dope tracks this year.  Check out our clothing brand inspired by music."><%= image_tag 'rndhat.png', :id => "adlogo1", :class => "footerimage" %></a></li>
 			
-			<li><a data-placement="top" role="button" data-toggle="popover" data-trigger="hover click" data-html="true" title="Rhymes & Designs" data-content="<div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'spaceship2.png', :class => "footerimage" %></a></li>
+			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" title="Rhymes & Designs" data-content="<div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'spaceship2.png', :class => "footerimage" %></a></li>
 
-			<li><%= image_tag 'rndhatred.png', :class => "footerimage" %></li>
-			<li><%= image_tag 'button.png', :class => "footerimage" %></li>
-			<li><%= image_tag 'button.png', :class => "footerimage" %></li>
+			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" title="Rhymes & Designs" data-content="<div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'rndhatred.png', :class => "footerimage" %></a></li>
+
+			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" title="Rhymes & Designs" data-content="<div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'button.png', :class => "footerimage" %></a></li>
+
+			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" title="Partner Today" data-content="<div>Put your product or service here.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'button.png', :class => "footerimage" %></a></li>
 		</ul>
 
-
 	</div>
+
 
 	<div id="plusbutton">
 		<span class="fa-stack fa-lg">
@@ -133,14 +133,27 @@
 		$("#sitemenu-icon").removeClass("active");
 		$('body').removeClass("noscroll");
 	});
+
+
 	$('.backgroundcolor').click(function(){
 		
 		console.log(55);
 	});
 
-	$(function () {
-	  $('[data-toggle="popover"]').popover()
-	})
+
+
+$(document).ready(function () {
+    $('.pop').each(function () {
+        var $elem = $(this);
+        $elem.popover({
+            placement: 'top',
+            trigger: 'hover click',
+            html: true,
+            container: $elem,
+            animation: true,
+        });
+    });
+});
 
 
 </script>
