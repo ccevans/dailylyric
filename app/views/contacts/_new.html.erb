@@ -3,6 +3,9 @@
   <%= simple_form_for :contact, :url => {:action => :create, :controller=>"contacts"} do |f| %>
     <%= f.input :name, :required => true, :placeholder => 'Name', autofocus: true %>
     <%= f.input :email, :required => true, :placeholder => 'Email' %>
+    <%= f.check_box :signup, :required => true, :checked => true, :label => "Sign-up to Weekly Emails" %>
+    <%= f.label :signup, :label => "Sign-up to Weekly Emails" %>
+
 
 
     <div class= "hidden">
