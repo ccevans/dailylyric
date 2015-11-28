@@ -26,10 +26,21 @@
 		</div>
 	</div>
 
+<div id="wrapperform3">
+	<div id="hiddenform3" class="">
+		<div class="curatorbox">
+			Become a curator for a week.
+		</div>
+
+		<%= render 'contacts/new' %>
+
+		</div>
+	</div>
+
 	<div class="rightmenu">
 		<ul>
 			<li id="partnernow">Partner With Us</li>
-			<li id="dailyemail2">Be A Curator</li>
+			<li id="beacurator">Be A Curator</li>
 			<li id="dailyemail">Join Email</li>
 			<li>Twitter</li>
 			<li>Instagram</li>
@@ -93,6 +104,8 @@
 		$("#wrapperform").removeClass("active");
 		$("#hiddenform2").removeClass("active");
 		$("#wrapperform2").removeClass("active");
+		$("#hiddenform3").removeClass("active");
+		$("#wrapperform3").removeClass("active");
 		$("#sitemenu-icon").removeClass("open");
 		$("#sitemenu-icon").removeClass("active");
 	});
@@ -104,12 +117,23 @@
 		$("#wrapperform").removeClass("active");
 		$("#hiddenform2").removeClass("active");
 		$("#wrapperform2").removeClass("active");
+		$("#hiddenform3").removeClass("active");
+		$("#wrapperform3").removeClass("active");
 		$("#sitemenu-icon").removeClass("open");
 		$("#sitemenu-icon").removeClass("active");
 	});
 	$("#dailyemail").click(function(){
 		$("#hiddenform").addClass("active");
 		$("#wrapperform").addClass("active");
+		$("#sitemenu-icon").addClass("active");
+		$("#sitemenu-icon").addClass("open");
+		$('body').addClass("noscroll");
+		$('.rightmenu').removeClass('revealed');
+		$('.overlay').addClass('nodisplay');
+	});
+	$("#beacurator").click(function(){
+		$("#hiddenform3").addClass("active");
+		$("#wrapperform3").addClass("active");
 		$("#sitemenu-icon").addClass("active");
 		$("#sitemenu-icon").addClass("open");
 		$('body').addClass("noscroll");

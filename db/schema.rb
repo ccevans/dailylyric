@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20151121010441) do
     t.datetime "updated_at"
     t.datetime "published_at"
     t.text     "verse"
-    t.string   "audiolink"
     t.string   "curator"
+    t.text     "audiolink"
   end
 
 end
