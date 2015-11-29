@@ -8,6 +8,7 @@
 	 	<div class="infopage <%= lyric.id %> nodisplay">
 	 		<%= lyric.artist %></br>
 	 		<%= lyric.song %></br>
+	 		<%= lyric.title %></br>
 	 		
 	 		<span data-toggle="tooltip" data-placement="top" title="Curator"><%= link_to lyric.curator, lyric.link %></span>
 
@@ -20,7 +21,7 @@
 		</div>
 
 	 	<div class="songbutton <%= lyric.id %>">
-	 	<%= link_to :anchor => lyric.id do %>
+	 	<%= link_to lyrics_path(:anchor => lyric.id) do %>
 	 	<i class="fa fa-play-circle-o"></i>
 	 	<% end %>
 	 	</div>
@@ -42,7 +43,11 @@
 					  $('[data-toggle="tooltip"]').tooltip()
 				})
 
-				</script>
+				$('.songbutton' + '.<%= lyric.id %>').click(function( event ) {
+				  event.preventDefault();
+				});
+			</script>
+
 
   		
 
