@@ -4,7 +4,7 @@
 
 
 .backgroundpage {position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; padding: 0;}
-.headerpage {position: fixed; width: 100%; top: 0; left: 0; z-index:1000;}
+.headerpage {position: fixed; width: 15%; top: 0; left: 0; z-index:1000;}
 .headerleft	{position: absolute; top: 10px; left: 10px; font-size: 24px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
 .headerright {position: absolute; top: 10px; right: 10px; font-size: 24px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
 .headerright2 {position: absolute; top: 10px; right: 10px; font-size: 24px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
@@ -15,6 +15,11 @@
 .versepage {font-family: "futura-pt",sans-serif; width: 100%; font-size: 30px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; padding: 100px 0 0 0;}
 .versepage i {font-size: 60px; margin: 20px 0; text-align: center; width: 100%; color: #fff;}
 .centerpage ul {margin: 0; padding: 0;}
+.headerimage {width:100%; position: relative;}
+.popover-content img {width: 100%; position: relative;}
+.rightmenu.revealed ul li a {color: #fff; text-decoration: none;}
+.rightmenu.revealed ul li a:hover {color: #e74c3c; text-decoration: none;}
+.rightmenu.revealed ul li.curatorlist a.pop .popover {min-width: 100px !important; width: 70%; position: absolute;}
 
 .footerpage {position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .95);}
 .footerpage ul {position: relative; width: 30%; text-align: center; list-style-type: none; margin: 0 35%; padding: 0;}
@@ -306,6 +311,7 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
 
 // mobile css
 @media screen and (max-width: 640px){
+    .headerpage {position: fixed; width: 30%; top: 0; left: 0; z-index:1000;}
     .headerleft {position: absolute; top: 10px; left: 10px; font-size: 18px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
     .headerright {position: absolute; top: 10px; right: 10px; font-size: 18px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
     .headerright2 {position: absolute; top: 10px; right: 10px; font-size: 18px; color: #000; font-weight: 700; font-family: "diavlo",sans-serif;}
