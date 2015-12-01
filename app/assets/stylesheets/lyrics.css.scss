@@ -404,16 +404,16 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
     #wrapperform {opacity: 0; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,1.0); margin: 0;}
     #wrapperform.active {opacity: 1; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,1.0); margin: 0;}
     #hiddenform {position: absolute; opacity: 0; background-color: none; z-index: 0; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 0 auto;}
-    #hiddenform.active {position: absolute; opacity: 1; background-color: none; z-index: 1000; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 0 auto;}
+    #hiddenform.active {position: absolute; opacity: 1; background-color: none; z-index: 1000; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 0 auto;}
 
     #wrapperform2 {overflow-y: scroll; opacity: 0; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(215,121,172,.95); margin: 0;}
     #wrapperform2.active {overflow-y: scroll; opacity: 1; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(215,121,172,.95); margin: 0;}
     #hiddenform2 {position: absolute; opacity: 0; background-color: none; z-index: 0; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0;}
-    #hiddenform2.active {position: absolute; opacity: 1; background-color: none; z-index: 1000; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0;}
+    #hiddenform2.active {position: absolute; opacity: 1; background-color: none; z-index: 1000; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0;}
 
     #wrapperform3 {overflow-y: scroll; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,.95); margin: 0; opacity: 0;}
     #wrapperform3.active {overflow-y: scroll; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,.95); margin: 0; opacity: 1;}
-    #hiddenform3 {position: absolute; background-color: none; z-index: 0; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0; opacity: 0;}
+    #hiddenform3 {position: absolute; background-color: none; z-index: 0; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0; opacity: 0;}
     #hiddenform3.active {position: absolute; background-color: none; z-index: 1000; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0; opacity: 1;}
 
     #hiddenform2 h1 {text-align: center; font-size: 48px; color: #000;}
