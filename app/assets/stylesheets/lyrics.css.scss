@@ -438,8 +438,8 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
     .sitedesign a:hover {color: #000; font-weight: 700;}
 
     // hidden form
-    #wrapperform {opacity: 0; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,1.0); margin: 0;}
-    #wrapperform.active {opacity: 1; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,1.0); margin: 0;}
+    #wrapperform {opacity: 0; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,.95); margin: 0;}
+    #wrapperform.active {opacity: 1; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(231, 76, 60,.95); margin: 0;}
     #hiddenform {position: absolute; opacity: 0; background-color: none; z-index: 0; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 0 auto;}
     #hiddenform.active {position: absolute; opacity: 1; background-color: none; z-index: 1000; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 0 auto;}
 
@@ -452,6 +452,11 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
     #wrapperform3.active {overflow-y: scroll; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,.95); margin: 0; opacity: 1;}
     #hiddenform3 {position: absolute; background-color: none; z-index: 0; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0; opacity: 0;}
     #hiddenform3.active {position: absolute; background-color: none; z-index: 1000; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0; opacity: 1;}
+
+    #wrapperform4 {overflow-y: scroll; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(52, 152, 219,.95); margin: 0; opacity: 0;}
+    #wrapperform4.active {overflow-y: scroll; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(52, 152, 219,.95); margin: 0; opacity: 1;}
+    #hiddenform4 {position: absolute; background-color: none; z-index: 0; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0; opacity: 0;}
+    #hiddenform4.active {position: absolute; background-color: none; z-index: 1000; top: 0; left: 10%; width: 80%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0; opacity: 1;}
 
     #hiddenform2 h1 {text-align: center; font-size: 48px; color: #000;}
     #hiddenform2 h2 {text-align: center; font-size: 36px; color: #000;}
@@ -509,5 +514,14 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
     .infopage span {font-size: 18px; line-height: 20px;}
 
     #my-lyrics .centerpage .versepage .audiopage iframe {width: 100% !important;}
+
+    .adimage {width: 40%; margin: 0; float: left;}
+    .adbox .adinfo {width: 60%; float: left; padding: 5px 2%; color: #fff; font-size: 18px; line-height: 20px;}
+    .adbox .adinfo .adlink {background-color: rgba(255, 255, 255,1); border-radius: 50%; width: 50px; margin: 5px auto; padding: 15px 0 0 0; text-align:center; height: 50px; cursor: pointer;}
+    .adbox .adinfo .adlink a {text-align: center; color: #e74c3c; text-decoration: none; font-size: 20px; line-height: 20px;}
+    .adbox .adinfo .adlink:hover {background-color: rgba(231, 76, 60,1); border-radius: 50%; width: 50px; margin: 5px auto; padding: 15px 0 0 0; text-align:center; height: 50px; cursor: pointer;}
+    .adbox .adinfo .adlink:hover a {color: #fff; text-decoration: none; font-size: 20px; line-height: 20px;}
+    .adbox .adinfo .adlink2 {width: auto; margin: 15px auto; text-align:center; cursor: pointer;}
+
 
 }
