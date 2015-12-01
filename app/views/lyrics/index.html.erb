@@ -187,6 +187,7 @@
 
 	$("#closebutton1").click(function(){
 		$("#popup1").addClass("nodisplay");
+		$('.pop').addClass("nodisplay");
 	});
 	$("#closebutton2").click(function(){
 		$("#popup2").addClass("nodisplay");
@@ -199,6 +200,19 @@
 	});
 	$("#closebutton5").click(function(){
 		$("#popup5").addClass("nodisplay");
+	});
+
+	$(document).ready(function () {
+	    $('.pop').each(function () {
+	        var $elem = $(this);
+	        $elem.popover({
+	            placement: 'top',
+	            trigger: 'hover click',
+	            html: true,
+	            container: $elem,
+	            animation: true,
+	        });
+	    });
 	});
 
 
