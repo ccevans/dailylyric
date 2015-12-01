@@ -20,10 +20,18 @@
 .rightmenu.revealed ul li a {color: #fff; text-decoration: none;}
 .rightmenu.revealed ul li a:hover {color: #e74c3c; text-decoration: none;}
 .rightmenu.revealed ul li.curatorlist a.pop .popover {min-width: 100px !important; width: 70%; position: absolute;}
+.ccevanslogo {position: absolute; bottom:0; left: 0; width: 40%; margin: 0 30%;}
+.ccevanslogo:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: .8;
+}
 
 .footerpage {position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .95);}
 .footerpage ul {position: relative; width: 30%; text-align: center; list-style-type: none; margin: 0 35%; padding: 0;}
-.footerpage ul li {float: left; width: 16%; margin: 2px 2%;}
+.footerpage ul li {float: left; width: 16%; margin: 2px 2%; cursor: pointer;}
 .footerimage {float: left; width: 100%;}
 
 .infopage {position: relative; width: 100%; margin: 10px 0; padding: 0; font-weight: 400; 
@@ -304,10 +312,12 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
 .footerpage ul li .popover .popover-title {background-color: rgba(0,0,0,1); color: #fff;}
 .footerpage ul li .popover .arrow {border-top-color: #000;}
 .footerpage ul li .popover.top > .arrow::after {border-top-color: #000 !important;}
-.footerpage ul li .popover .popover-content div.adlink {background-color: rgba(255, 255, 255,1); border-radius: 50%; width: 40px; margin: 5px; float: right; padding: 10px;}
+.footerpage ul li .popover .popover-content div.adlink {background-color: rgba(255, 255, 255,1); border-radius: 50%; width: 40px; margin: 5px; float: right; padding: 10px; cursor: pointer;}
 .footerpage ul li .popover .popover-content div.adlink a {text-align: center; color: #e74c3c; text-decoration: none;}
 .footerpage ul li .popover .popover-content div.adlink:hover {background-color: rgba(231, 76, 60,1); border-radius: 50%; width: 40px; margin: 5px; float: right; padding: 10px;}
 .footerpage ul li .popover .popover-content div.adlink:hover a {color: #fff; text-decoration: none;}
+.footerpage ul li .popover .popover-content div i.fa.fa-times {cursor: pointer;}
+.footerpage ul li .popover .popover-content div i.fa.fa-times:hover {cursor: pointer; color: #e74c3c;}
 
 // mobile css
 @media screen and (max-width: 640px){

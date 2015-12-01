@@ -43,22 +43,28 @@
 			<li id="beacurator">Be A Curator</li>
 			<li id="dailyemail">Join Email</li>
 			<li><%= link_to 'Instagram', 'http://www.instagram.com/dailylyriccom', :target => '_blank' %></li>
-			<li class="curatorlist">Weekly Curator: </br>CC Evans</li>
-			<li class="curatorlist"><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="Currently living in Charlotte, where I enjoy work from Deniro Farrar, Elevator Jay, Lute and many more.  Still listening to Dave East and Jezzy recent projects.">Weekly Curator: </br> CC Evans</a></li>
+			<li class="curatorlist"><%= link_to 'http://twitter.com/opportreneur', :target => '_blank' do %>Weekly Curator: </br>CC Evans <% end %></li>
+
 		</ul>
+
+		<div class="ccevanslogo">
+			<%= link_to 'http://ccevans.com', :target => '_blank' do %>
+			<%= image_tag 'ccevans-experience.png', :class => "headerimage" %>
+			<% end %>
+		</div>
 	</div>
 
 	<div class="footerpage">
 		<ul>
-			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="Currently listening to Jay Rock 90059 album.  We think it is one of the best albums of the year.  TDE blessed us with two dope tracks this year.  Check out our clothing brand inspired by music."><%= image_tag 'rndhat.png', :id => "adlogo1", :class => "footerimage" %></a></li>
+			<li><a id="popup1" class="pop" data-placement="top" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div id='closebutton1'><i class='fa fa-times'></i></div>Currently listening to Jay Rock 90059 album.  We think it is one of the best albums of the year.  TDE blessed us with two dope tracks this year.  Check out our clothing brand inspired by music."><%= image_tag 'rndhat.png', :id => "adlogo1", :class => "footerimage" %></a></li>
 			
-			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'spaceship2.png', :class => "footerimage" %></a></li>
+			<li><a id="popup2" class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div id='closebutton2'><i class='fa fa-times'></i></div><div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'spaceship2.png', :class => "footerimage" %></a></li>
 
-			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'rndhatred.png', :class => "footerimage" %></a></li>
+			<li><a id="popup3" class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div id='closebutton3'><i class='fa fa-times'></i></div><div>One of my favorite tracks is Spaceship by Kanye.  Need to launch a website, hit me up.</div><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'rndhatred.png', :class => "footerimage" %></a></li>
 
-			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div>Put your product or service here.</div> <img src='/assets/dailylyricmug.png'><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'dailylyricmug.png', :class => "footerimage" %></a></li>
+			<li><a id="popup4" class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div id='closebutton4'><i class='fa fa-times'></i></div><div>Put your product or service here.</div> <img src='/assets/dailylyricmug.png'><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'dailylyricmug.png', :class => "footerimage" %></a></li>
 
-			<li><a class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div>Put your product or service here.</div> <img src='/assets/dailylyrichat.png'><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'dailylyrichat.png', :class => "footerimage" %></a></li>
+			<li><a id="popup5" class="pop" data-placement="top" role="button" data-toggle="popover" data-trigger="click hover" data-html="true" data-content="<div id='closebutton5'><i class='fa fa-times'></i></div><div>Put your product or service here.</div> <img src='/assets/dailylyrichat.png'><div class='adlink'><a href=www.rhymesanddesigns.com>GO</a></div>"><%= image_tag 'dailylyrichat.png', :class => "footerimage" %></a></li>
 		</ul>
 </div>
 
@@ -177,6 +183,22 @@
 	            animation: true,
 	        });
 	    });
+	});
+
+	$("#closebutton1").click(function(){
+		$("#popup1").addClass("nodisplay");
+	});
+	$("#closebutton2").click(function(){
+		$("#popup2").addClass("nodisplay");
+	});
+	$("#closebutton3").click(function(){
+		$("#popup3").addClass("nodisplay");
+	});
+	$("#closebutton4").click(function(){
+		$("#popup4").addClass("nodisplay");
+	});
+	$("#closebutton5").click(function(){
+		$("#popup5").addClass("nodisplay");
 	});
 
 

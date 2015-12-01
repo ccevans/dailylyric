@@ -3,7 +3,7 @@ class LyricsController < ApplicationController
 	respond_to :html, :js
 
 	def index
-		@lyrics = Lyric.paginate(page: params[:page], per_page: 10).published.order('created_at DESC')
+		@lyrics = Lyric.paginate(page: params[:page], per_page: 6).published.order('created_at DESC')
 		
 		respond_to do |format|
 		  format.html
