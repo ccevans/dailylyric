@@ -29,6 +29,7 @@
     opacity: .8;
 }
 
+
 .footerpage {position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1000; height: auto; background-color: rgba(255,255,255, .95);}
 .footerpage ul {position: relative; width: 30%; text-align: center; list-style-type: none; margin: 0 35%; padding: 0;}
 .footerpage ul li {float: left; width: 16%; margin: 2px 2%; cursor: pointer;}
@@ -239,6 +240,34 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
     opacity: 1;
 }
 
+#wrapperform4 {overflow-y: scroll; z-index: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(52, 152, 219,1.0); margin: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+#wrapperform4.active {overflow-y: scroll; z-index: 999; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(52, 152, 219,1.0); margin: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+#hiddenform4 {position: absolute; background-color: none; z-index: 0; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+#hiddenform4.active {position: absolute; background-color: none; z-index: 1000; top: 0; left: 25%; width: 50%; height: auto; margin: 100px auto 100px auto; padding: 0 0 100px 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
 #hiddenform2 h1 {text-align: center; font-size: 48px; color: #000;}
 #hiddenform2 h2 {text-align: center; font-size: 36px; color: #000;}
 
@@ -312,12 +341,19 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
 .footerpage ul li .popover .popover-title {background-color: rgba(0,0,0,1); color: #fff;}
 .footerpage ul li .popover .arrow {border-top-color: #000;}
 .footerpage ul li .popover.top > .arrow::after {border-top-color: #000 !important;}
-.footerpage ul li .popover .popover-content div.adlink {background-color: rgba(255, 255, 255,1); border-radius: 50%; width: 40px; margin: 5px; float: right; padding: 10px; cursor: pointer;}
-.footerpage ul li .popover .popover-content div.adlink a {text-align: center; color: #e74c3c; text-decoration: none;}
-.footerpage ul li .popover .popover-content div.adlink:hover {background-color: rgba(231, 76, 60,1); border-radius: 50%; width: 40px; margin: 5px; float: right; padding: 10px;}
-.footerpage ul li .popover .popover-content div.adlink:hover a {color: #fff; text-decoration: none;}
+.footerpage ul li .popover .popover-content .adlink {background-color: rgba(255, 255, 255,1); border-radius: 50%; width: 40px; margin: 5px auto; padding: 10px; cursor: pointer;}
+.footerpage ul li .popover .popover-content .adlink a {text-align: center; color: #e74c3c; text-decoration: none;}
+.footerpage ul li .popover .popover-content .adlink:hover {background-color: rgba(231, 76, 60,1); border-radius: 50%; width: 40px; margin: 5px auto; padding: 10px;}
+.footerpage ul li .popover .popover-content .adlink:hover a {color: #fff; text-decoration: none;}
 .footerpage ul li .popover .popover-content div i.fa.fa-times {cursor: pointer;}
 .footerpage ul li .popover .popover-content div i.fa.fa-times:hover {cursor: pointer; color: #e74c3c;}
+
+.adimage {width: 30%; margin: 0; float: left;}
+.adbox .adinfo {width: 70%; float: left; padding: 5px 2%; color: #fff; font-size: 24px; line-height: 26px;}
+.adbox .adinfo .adlink {background-color: rgba(255, 255, 255,1); border-radius: 50%; width: 50px; margin: 5px auto; padding: 12px 0 0 0; text-align:center; height: 50px; cursor: pointer;}
+.adbox .adinfo .adlink a {text-align: center; color: #e74c3c; text-decoration: none; font-size: 20px; line-height: 20px;}
+.adbox .adinfo .adlink:hover {background-color: rgba(231, 76, 60,1); border-radius: 50%; width: 50px; margin: 5px auto; padding: 12px 0 0 0; text-align:center; height: 50px; cursor: pointer;}
+.adbox .adinfo .adlink:hover a {color: #fff; text-decoration: none; font-size: 20px; line-height: 20px;}
 
 // mobile css
 @media screen and (max-width: 640px){
