@@ -1,6 +1,6 @@
 <div class="backgroundpage">
 	<div class="headerpage">
-		<div class="headerleft"><%= image_tag 'dailylyric-logo2.png', :class => "headerimage" %></div>
+		<div id="headerbutton" class="headerleft"><%= image_tag 'dailylyric-logo2.png', :class => "headerimage" %></div>
 
 	</div>
 
@@ -97,19 +97,41 @@
 		</div>
 	</div>
 
+	<div id="wrapperform5">
+	<div id="hiddenform5" class="">
+		<div id="aboutinfo" class="infobox">
+			DailyLyric.com was built because I got tired of going to terrible hiphop blog sites.  They are so annoying with the ads popping up every second, click bait headlines, gossip and only showing love to artists who help their pockets.  There are some blogs that I do love and hoping to partner with them in the future.  The mission of DailyLyric.com is to spread dope music.  Each week we invite curators of different backgrounds and demographics to share the hiphop music they are listening to.  Right now the plan is to post one track a day.  Thanks for stopping by.
+		</div>
+
+		<div id="curatorinfo" class="infobox">
+			<h1>This Week Curator</h1>
+			<h3>CC Evans</h3>
+			<h4>Charlotte, NC</h4>
+			<p>
+			Still listening to Dave East and Jeezy's recent projects.  Huge J.Cole and Kanye West fan.  Love the work from many artists in Charlotte like Elevator Jay, Deniro Farrar, and Lute to name a few.  Hoping Frank Ocean drop his next album soon and looking forward to seeing what Drake does with this next project.  Lupe's Tetsuo and Youth is probably my favorite project that dropped this year.
+			</p>
+
+			<%= link_to 'http://twitter.com/opportreneur', :target => '_blank' do %>@opportreneur <% end %>
+		</div>
+
+
+
+		</div>
+	</div>
+
 	<div class="rightmenu">
 		<ul>
 			<li id="partnernow">Partner With Us</li>
 			<li id="beacurator">Be A Curator</li>
 			<li id="dailyemail">Join Email</li>
 			<li><%= link_to 'Instagram', 'http://www.instagram.com/dailylyriccom', :target => '_blank' %></li>
-			<li class="curatorlist"><%= link_to 'http://twitter.com/opportreneur', :target => '_blank' do %>Weekly Curator: </br>CC Evans <% end %></li>
+			<li id="curatorbutton" class="curatorlist">Weekly Curator: </br>CC Evans</li>
 
 		</ul>
 
 		<div class="ccevanslogo">
 			<%= link_to 'http://ccevans.com', :target => '_blank' do %>
-			<%= image_tag 'ccevans-experience.png', :class => "headerimage" %>
+			<%= image_tag 'itsaspaceship.png', :class => "headerimage" %>
 			<% end %>
 		</div>
 	</div>
@@ -172,6 +194,8 @@
 		$("#wrapperform3").removeClass("active");
 		$("#hiddenform4").removeClass("active");
 		$("#wrapperform4").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
 		$("#sitemenu-icon").removeClass("open");
 		$("#sitemenu-icon").removeClass("active");
 	});
@@ -187,6 +211,8 @@
 		$("#wrapperform3").removeClass("active");
 		$("#hiddenform4").removeClass("active");
 		$("#wrapperform4").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
 		$("#sitemenu-icon").removeClass("open");
 		$("#sitemenu-icon").removeClass("active");
 	});
@@ -236,6 +262,8 @@
 		$("#wrapperform3").removeClass("active");
 		$("#hiddenform4").removeClass("active");
 		$("#wrapperform4").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
 		$("#sitemenu-icon").removeClass("open");
 		$("#sitemenu-icon").removeClass("active");
 		$('body').removeClass("noscroll");
@@ -254,6 +282,8 @@
 		$("#wrapperform2").removeClass("active");
 		$("#hiddenform3").removeClass("active");
 		$("#wrapperform3").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
 		$("#sitemenu-icon").addClass("active");
 		$("#sitemenu-icon").addClass("open");
 		$('body').addClass("noscroll");
@@ -274,6 +304,8 @@
 		$("#wrapperform2").removeClass("active");
 		$("#hiddenform3").removeClass("active");
 		$("#wrapperform3").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
 		$("#sitemenu-icon").addClass("active");
 		$("#sitemenu-icon").addClass("open");
 		$('body').addClass("noscroll");
@@ -294,6 +326,8 @@
 		$("#wrapperform2").removeClass("active");
 		$("#hiddenform3").removeClass("active");
 		$("#wrapperform3").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
 		$("#sitemenu-icon").addClass("active");
 		$("#sitemenu-icon").addClass("open");
 		$('body').addClass("noscroll");
@@ -314,6 +348,8 @@
 		$("#wrapperform2").removeClass("active");
 		$("#hiddenform3").removeClass("active");
 		$("#wrapperform3").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
 		$("#sitemenu-icon").addClass("active");
 		$("#sitemenu-icon").addClass("open");
 		$('body').addClass("noscroll");
@@ -334,6 +370,46 @@
 		$("#wrapperform2").removeClass("active");
 		$("#hiddenform3").removeClass("active");
 		$("#wrapperform3").removeClass("active");
+		$("#hiddenform5").removeClass("active");
+		$("#wrapperform5").removeClass("active");
+		$("#sitemenu-icon").addClass("active");
+		$("#sitemenu-icon").addClass("open");
+		$('body').addClass("noscroll");
+		$('.rightmenu').removeClass('revealed');
+		$('.overlay').addClass('nodisplay');
+	});
+	$("#headerbutton").click(function(){
+		$("#aboutinfo").removeClass("nodisplay");
+		$("#curatorinfo").addClass("nodisplay");
+		$("#hiddenform5").addClass("active");
+		$("#wrapperform5").addClass("active");
+		$("#hiddenform").removeClass("active");
+		$("#wrapperform").removeClass("active");
+		$("#hiddenform2").removeClass("active");
+		$("#wrapperform2").removeClass("active");
+		$("#hiddenform3").removeClass("active");
+		$("#wrapperform3").removeClass("active");
+		$("#hiddenform4").removeClass("active");
+		$("#wrapperform4").removeClass("active");
+		$("#sitemenu-icon").addClass("active");
+		$("#sitemenu-icon").addClass("open");
+		$('body').addClass("noscroll");
+		$('.rightmenu').removeClass('revealed');
+		$('.overlay').addClass('nodisplay');
+	});
+	$("#curatorbutton").click(function(){
+		$("#aboutinfo").addClass("nodisplay");
+		$("#curatorinfo").removeClass("nodisplay");
+		$("#hiddenform5").addClass("active");
+		$("#wrapperform5").addClass("active");
+		$("#hiddenform").removeClass("active");
+		$("#wrapperform").removeClass("active");
+		$("#hiddenform2").removeClass("active");
+		$("#wrapperform2").removeClass("active");
+		$("#hiddenform3").removeClass("active");
+		$("#wrapperform3").removeClass("active");
+		$("#hiddenform4").removeClass("active");
+		$("#wrapperform4").removeClass("active");
 		$("#sitemenu-icon").addClass("active");
 		$("#sitemenu-icon").addClass("open");
 		$('body').addClass("noscroll");
