@@ -100,6 +100,7 @@
 	<div id="wrapperform5">
 	<div id="hiddenform5" class="">
 		<div id="aboutinfo" class="infobox">
+			<%= image_tag 'dailylyric-logosmall2.png', :class => "aboutimage" %>
 			DailyLyric.com was built because I got tired of going to terrible hiphop blog sites.  They are so annoying with the ads popping up every second, click bait headlines, gossip and only showing love to artists who help their pockets.  There are some blogs that I do love and hoping to partner with them in the future.  The mission of DailyLyric.com is to spread dope music.  Each week we invite curators of different backgrounds and demographics to share the hiphop music they are listening to.  Right now the plan is to post one track a day.  Thanks for stopping by.
 		</div>
 
@@ -108,7 +109,7 @@
 			<h3>CC Evans</h3>
 			<h4>Charlotte, NC</h4>
 			<p>
-			Still listening to Dave East and Jeezy's recent projects.  Huge J.Cole and Kanye West fan.  Love the work from many artists in Charlotte like Elevator Jay, Deniro Farrar, and Lute to name a few.  Hoping Frank Ocean drop his next album soon and looking forward to seeing what Drake does with this next project.  Lupe's Tetsuo and Youth is probably my favorite project that dropped this year.
+			Still listening to Dave East and Jeezy's recent projects.  Huge J.Cole and Kanye West fan.  Love the work from many artists in Charlotte like Elevator Jay, Deniro Farrar, and Lute to name a few.  Hoping Frank Ocean drop his next album soon and looking forward to seeing what Drake does with his next album.  Lupe's Tetsuo and Youth is probably my favorite project that dropped this year.
 			</p>
 
 			<%= link_to 'http://twitter.com/opportreneur', :target => '_blank' do %>@opportreneur <% end %>
@@ -416,6 +417,7 @@
 		$('.rightmenu').removeClass('revealed');
 		$('.overlay').addClass('nodisplay');
 	});
+	
 	$('.backgroundcolor').click(function(){
 		
 		console.log(55);
