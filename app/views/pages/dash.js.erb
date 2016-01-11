@@ -1,0 +1,2 @@
+$('#my-lyrics').append('<%= escape_javascript render(@all_posts) %>');
+$('.pagination').replaceWith('<%= escape_javascript will_paginate(@all_posts) %>');
