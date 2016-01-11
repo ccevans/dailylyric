@@ -83,7 +83,12 @@
 <% end %>
 </div>
 
-<%= will_paginate @all_posts %>
+
+<div id="infinite-scrolling">
+  <%= will_paginate @all_posts %>
+</div>
+
+
 
 <% end %>
 
