@@ -28,6 +28,8 @@
 
  	<%= link_to_add_association 'Add Line', f, :lines %>
 
+  <% if can? :manage, :all %>
+
  	  <div class="field">
     <%= f.label :status %>
     <%= f.select :status, ["Draft", "Published", "Scheduled"], selected: status_for(@lyric) %>
@@ -37,6 +39,8 @@
     <%= f.label :published_at, "Publish At" %><br>
     <%= f.datetime_select :published_at %>
   </div>
+
+  <% end %>
 
 
 <%= f.button :submit, "Submit", class: "post-button" %>

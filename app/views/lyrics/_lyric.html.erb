@@ -5,7 +5,7 @@
 
 	 <div class="versepage <%= lyric.id %>"><%= simple_format(lyric.verse) %>
 
-	 	<div class="infopage <%= lyric.id %> nodisplay">
+	 	<div class="infopage <%= lyric.id %>">
 	 		<% if lyric.artist.present? %><%= lyric.artist %></br><% end %>
 	 		<% if lyric.song.present? %><%= lyric.song %></br><% end %>
 	 		<% if lyric.title.present? %><%= lyric.title %></br><% end %>

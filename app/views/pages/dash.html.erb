@@ -1,0 +1,87 @@
+<% if user_signed_in? %>      
+
+  <%= link_to edit_user_registration_path do %>
+     Edit Account
+  <% end %>
+
+<% else %>
+
+   <%= link_to new_user_registration_path do %>
+     Sign Up / Sign In
+   <% end %>
+<% end %>
+
+<% if can? :manage, :all %>
+</br>
+<h1><%= Time.now.in_time_zone("Eastern Time (US & Canada)").try(:strftime, "%a. %b %d, %Y") %></h1>
+
+<div id="my-lyrics">
+<% if @all_posts.any? %>
+	  <% @all_posts.each do |all_post| %>
+	  	<% if all_post.published_at == nil %>
+	  		<div class="eachsongdraft">
+		  		<strong><%= all_post.published_at.try(:strftime, "%a. %b %d, %Y") %>Draft</strong></br>
+		  		<%= all_post.status %></br>
+		  		<%= simple_format(all_post.verse) %>
+		  		<% if all_post.artist.present? %><%= all_post.artist %></br><% end %>
+		 		<% if all_post.song.present? %><%= all_post.song %></br><% end %>
+		 		<% if all_post.title.present? %><%= all_post.title %></br><% end %>
+
+		 		<%= link_to all_post.curator, all_post.link, :target => '_blank' %></br>
+
+		 		<%= raw(all_post.audiolink) %></br>
+
+		 	<%= link_to 'Edit', edit_lyric_path(all_post) %>
+	         <%= link_to 'Destroy', all_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+		 	</div>
+
+	  	<% elsif all_post.published_at >= Time.now.in_time_zone("Eastern Time (US & Canada)") %>
+
+		  	<div class="eachsongschedule">
+		  		<strong><%= all_post.published_at.try(:strftime, "%a. %b %d, %Y") %></strong></br>
+		  		<%= all_post.status %></br>
+		  		<%= simple_format(all_post.verse) %>
+		  		<% if all_post.artist.present? %><%= all_post.artist %></br><% end %>
+		 		<% if all_post.song.present? %><%= all_post.song %></br><% end %>
+		 		<% if all_post.title.present? %><%= all_post.title %></br><% end %>
+
+		 		<%= link_to all_post.curator, all_post.link, :target => '_blank' %></br>
+
+		 		<%= raw(all_post.audiolink) %></br>
+
+		 	<%= link_to 'Edit', edit_lyric_path(all_post) %>
+	         <%= link_to 'Destroy', all_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+		 	</div>
+
+		 <% else %>
+
+		  	<div class="eachsong">
+		  		<strong><%= all_post.published_at.try(:strftime, "%a. %b %d, %Y") %></strong></br>
+		  		<%= all_post.status %></br>
+		  		<%= simple_format(all_post.verse) %>
+		  		<% if all_post.artist.present? %><%= all_post.artist %></br><% end %>
+		 		<% if all_post.song.present? %><%= all_post.song %></br><% end %>
+		 		<% if all_post.title.present? %><%= all_post.title %></br><% end %>
+
+		 		<%= link_to all_post.curator, all_post.link, :target => '_blank' %></br>
+
+		 		<%= raw(all_post.audiolink) %></br>
+
+		 	<%= link_to 'Edit', edit_lyric_path(all_post) %>
+	         <%= link_to 'Destroy', all_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+		 	</div>
+
+		 <% end %>
+
+	  <% end %>
+  		
+
+
+<% end %>
+</div>
+
+<% end %>
+

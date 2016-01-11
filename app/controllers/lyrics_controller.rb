@@ -1,5 +1,6 @@
 class LyricsController < ApplicationController
 	before_action :find_lyric, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 	respond_to :html, :js
 
 	def index
@@ -18,12 +19,12 @@ class LyricsController < ApplicationController
 	end
 
 	def new
-		@lyric = Lyric.new
+		@lyric = current_user.lyrics.build
 		@lyric.lines.build
 	end
 
 	def create
-		@lyric = Lyric.new(lyric_params)
+		@lyric = current_user.lyrics.build(lyric_params)
 		if @lyric.save
 			redirect_to action: "index"
 		else
@@ -45,7 +46,7 @@ class LyricsController < ApplicationController
 
 	def destroy
 		@lyric.destroy
-		redirect_to root_path, notice: "Successfully deleted recipe"
+		redirect_to root_path, notice: "Successfully deleted lyric"
 	end
 
 	private
