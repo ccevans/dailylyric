@@ -106,13 +106,13 @@
 
 		<div id="curatorinfo" class="infobox">
 			<h1>This Week Curator</h1>
-			<h3>CC Evans</h3>
-			<h4>Charlotte, NC</h4>
+			<h3>King Phill</h3>
+			<h4>Raleigh, NC</h4>
 			<p>
-			Still listening to Dave East and Jeezy's recent projects.  Huge J.Cole and Kanye West fan.  Love the work from many artists in Charlotte like Elevator Jay, Deniro Farrar, and Lute to name a few.  Hoping Frank Ocean drop his next album soon and looking forward to seeing what Drake does with his next album.  Lupe's Tetsuo and Youth is probably my favorite project that dropped this year.
+			I’m a photographer, creative director, curator of cool shit and an all-around fan of good music. I love music; life wouldn’t be the same without it. I listen to everyone from The Doors to P-Funk to Joey Fatts. I like to think I’m mentally in a state of Rock N Roll, but I physically live a Hip-Hop lifestyle. I love finding new dope artists; it’s always great knowing music is in good hands.
 			</p>
 
-			<%= link_to 'http://twitter.com/opportreneur', :target => '_blank' do %>@opportreneur <% end %>
+			<%= link_to 'https://twitter.com/kingphill_', :target => '_blank' do %>@KingPhill_ <% end %>
 		</div>
 
 
@@ -126,7 +126,7 @@
 			<li id="beacurator">Be A Curator</li>
 			<li id="dailyemail">Join Email</li>
 			<li><%= link_to 'Instagram', 'http://www.instagram.com/dailylyriccom', :target => '_blank' %></li>
-			<li id="curatorbutton" class="curatorlist">Weekly Curator: </br>CC Evans</li>
+			<li id="curatorbutton" class="curatorlist">Weekly Curator: </br>King Phill</li>
 
 		</ul>
 
@@ -145,9 +145,10 @@
 
 			<li><a id="partnernow2" class="pop"><%= image_tag 'button.png', :class => "footerimage" %></a></li>
 
-			<li><a id="popup4" class="pop"><%= image_tag 'dailylyricmug.png', :class => "footerimage" %></a></li>
-
 			<li><a id="popup5" class="pop"><%= image_tag 'dailylyrichat.png', :class => "footerimage" %></a></li>
+			<li><a id="curatorbutton2" class="pop"><%= image_tag 'coolandwelldressed.png', :class => "footerimage" %></a></li>
+
+			
 		</ul>
 </div>
 
@@ -399,6 +400,25 @@
 		$('.overlay').addClass('nodisplay');
 	});
 	$("#curatorbutton").click(function(){
+		$("#aboutinfo").addClass("nodisplay");
+		$("#curatorinfo").removeClass("nodisplay");
+		$("#hiddenform5").addClass("active");
+		$("#wrapperform5").addClass("active");
+		$("#hiddenform").removeClass("active");
+		$("#wrapperform").removeClass("active");
+		$("#hiddenform2").removeClass("active");
+		$("#wrapperform2").removeClass("active");
+		$("#hiddenform3").removeClass("active");
+		$("#wrapperform3").removeClass("active");
+		$("#hiddenform4").removeClass("active");
+		$("#wrapperform4").removeClass("active");
+		$("#sitemenu-icon").addClass("active");
+		$("#sitemenu-icon").addClass("open");
+		$('body').addClass("noscroll");
+		$('.rightmenu').removeClass('revealed');
+		$('.overlay').addClass('nodisplay');
+	});
+	$("#curatorbutton2").click(function(){
 		$("#aboutinfo").addClass("nodisplay");
 		$("#curatorinfo").removeClass("nodisplay");
 		$("#hiddenform5").addClass("active");

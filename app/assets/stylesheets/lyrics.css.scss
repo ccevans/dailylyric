@@ -409,7 +409,7 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
     .footerpage ul {position: relative; width: 80%; text-align: center; list-style-type: none; margin: 0 10%; padding: 0;}
     .footerpage ul li {float: left; width: 16%; margin: 2px 2%;}
     .footerimage {float: left; width: 100%;}
-    .infopage {position: relative; width: 100%; margin: 10px 0; padding: 0; font-weight: 400; transition: all 1s ease 0s;}
+    .infopage {position: relative; width: 100%; margin: 10px 0; padding: 0; font-weight: 400; transition: all 1s ease 0s; font-size: 16px; line-height: 18px;}
     .audiopage {background-color:rgba(0,0,0,.5); width: 100%; position: relative; margin: 0 0 0 0; overflow: hidden; padding: 0; height: 0; transition: all 1s ease 0s;}
     .songbutton {cursor: pointer;}
     .pageimage {position: relative; width: 30%; margin: 0 35%; }
@@ -548,9 +548,9 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
 
     #partnernow {cursor: pointer;}
     #dailyemail {cursor: pointer;}
-    .infopage a {color: #fff; text-decoration: none; font-size: 18px;}
-    .infopage a:hover {color: #000; text-decoration: none; font-size: 18px;}
-    .infopage span {font-size: 18px; line-height: 20px;}
+    .infopage a {color: #fff; text-decoration: none; font-size: 16px;}
+    .infopage a:hover {color: #000; text-decoration: none; font-size: 16px;}
+    .infopage span {font-size: 16px; line-height: 18px;}
 
     #my-lyrics .centerpage .versepage .audiopage iframe {width: 100% !important;}
 
@@ -564,4 +564,6 @@ form.simple_form.contact label.string {font-size: 18px; color: #fff;}
 
     .infobox {color: #fff; font-size: 14px; line-height: 16px; text-align: center;}
     .aboutimage {width: 16%; margin: 10px 42%;}
+
+
 }

@@ -26,6 +26,7 @@ gem 'cocoon', '~> 1.2.6'
 gem 'mandrill-api', '~> 1.0', '>= 1.0.53'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem "social-buttons", '~> 0.3'
 
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
