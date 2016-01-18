@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require_tree .
 //= require bindWithDelay
+//= require social-share-button
 
 
 $(document).ready(function() {

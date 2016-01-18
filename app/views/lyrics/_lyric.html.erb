@@ -6,15 +6,15 @@
 	 <div class="versepage <%= lyric.id %>"><%= simple_format(lyric.verse) %>
 
 	 	<div class="infopage <%= lyric.id %>">
+
 	 		<% if lyric.artist.present? %><%= lyric.artist %></br><% end %>
 	 		<% if lyric.song.present? %><%= lyric.song %></br><% end %>
 	 		<% if lyric.title.present? %><%= lyric.title %></br><% end %>
 	 		
 	 		<span data-toggle="tooltip" data-placement="top" title="Curator"><%= link_to lyric.curator, lyric.link, :target => '_blank' %></span>
 
-	 		<span class='st_facebook_hcount' displayText='Facebook'></span>
-			<span class='st_twitter_hcount' displayText='Tweet'></span>
-			<span class='st_email_hcount' displayText='Email'></span>
+
+	 		<%= social_share_button_tag(truncate(lyric.verse, :length => 95), :popup => "true", :url => "http://www.dailylyric.com/##{lyric.id}", via: "dailylyriccom") %>
 
 
 	 	</div>
@@ -53,8 +53,3 @@
 				  event.preventDefault();
 				});
 			</script>
-
-
-  		
-
-	
