@@ -11,7 +11,7 @@
 	 		<% if lyric.song.present? %><%= lyric.song %></br><% end %>
 	 		<% if lyric.title.present? %><%= lyric.title %></br><% end %>
 	 		
-	 		<span data-toggle="tooltip" data-placement="top" title="Curator"><%= link_to lyric.curator, lyric.link, :target => '_blank' %></span>
+	 		<span data-toggle="tooltip" data-placement="top" title="Curator"><%= link_to lyric.curator, lyric.link, :target => '_blank' %></span></br>
 
 
 	 		<%= social_share_button_tag(truncate(lyric.verse, :length => 95), :popup => "true", :url => "http://www.dailylyric.com/##{lyric.id}", via: "dailylyriccom") %>
