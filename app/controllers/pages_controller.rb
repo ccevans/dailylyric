@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def dash
-  	@all_posts = Lyric.all.order("published_at DESC")
+  	@all_posts = Lyric.all.order("published_at DESC").paginate(page: params[:page], per_page: 10)
   end
 end
